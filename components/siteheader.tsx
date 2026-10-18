@@ -89,6 +89,15 @@ export default function SiteHeader() {
                 Account
               </Link>
 
+              {user.app_metadata?.role === "admin" && (
+                <Link
+                  href="/admin/questions"
+                  className="font-medium text-gray-700 transition hover:text-black"
+                >
+                  Questions
+                </Link>
+              )}
+
               <button
                 type="button"
                 onClick={handleSignOut}
